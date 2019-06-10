@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RGR1-Web</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sidenav.css">
+  <link rel="stylesheet" href="css/tabs.css">
+  <script src="js/sidenav.js"></script>
+  <script src="js/randomjoke.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/tabs.js"></script>
+</head>
+
+<body>
+  <script>
+    $("document").ready(function () {
+      getRandomJoke();
+      document.getElementById("defaultOpen").click();
+      document.getElementById("defaultImageOpen").click();
+    });
+  </script>
+  <header>
+    <div id="header-container">
+      <button id="menu" onclick="openOrCloseNav()">
+        <img src="images/ic_menu_black_36px.svg" alt="Menu">
+      </button>
+      <h1>
+        <a href="index.html">Polevichenko website</a>
+      </h1>
+    </div>
+  </header>
+
+  <nav id="sidenav-menu">
+    <a href="hobbies.html">Увлечения</a>
+    <a href="gadget.html">Любимый гаджет</a>
+    <a href="pet.html">Любимый питомец</a>
+    <a href="tasks.html">Интересные задания</a>
+  </nav>
+
+  <div id="main-container">
+    <main id="main">
+      <!--specific page content goes here-->
+      <article>
+
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <img src="images/ArtTrend.jpg" style="height: 400px;">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="images/harakteristiki.png" style="height: 400px;">
+          </div>
+
+          <div class="mySlides fade">
+            <img src="images/allinfo.jpg" style="height: 400px;">
+          </div>
+
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)" id="defaultImageOpen"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+
+        <!-- Tab links -->
+        <div class="tab">
+          <button class="tablinks" onclick="openTab(event, 'Description')" id="defaultOpen">Описание</button>
+          <button class="tablinks" onclick="openTab(event, 'Characteristics')">Характеристики</button>
+        </div>
+
+        <!-- Tab content -->
+
+        <div id="Description" class="tabcontent">
+          <h1>Тот самый любимый гаджет</h1>
+          <p>Это конечно же, мои наушники: Art Trend T101</p>
+          <img style="width: 80%" src="images/ArtTrend.jpg" alt="Really good, honestly">
+        </div>
+
+        <div id="Characteristics" class="tabcontent">
+          <p>Немного информации о наушниках:</p>
+          <img style="width: 80%" src="images/harakteristiki.png" alt="CPU info">
+         <!-- <p>Кратенько(почти) остальная информация:</p>
+          <img style="width: 80%" src="images/allinfo.png" alt="All info"> -->
+        </div>
+      </article>
+      <!--specific page content goes here-->
+    </main>
+
+    <aside id="random-joke">
+      <article>
+        <h1>Random picture for you:</h1>
+        <img id="random-joke-place" style="width: 80%" src="replace" alt="joke">
+      </article>
+    </aside>
+  </div>
+
+  <footer>
+    <p align="center">Written in 2019 by Polevichenko Inc.</p>
+  </footer>
+</body>
+
+</html>

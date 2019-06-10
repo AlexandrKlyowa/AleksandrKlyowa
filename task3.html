@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task lab3</title>
+    <style type="text/css">
+        form {
+            padding: 8px;
+            width: 400px;
+            border: 3px solid grey;
+            border-radius: 5px;
+        }
+        input {
+            margin: 8px;
+            padding: 4px;
+            font-size: 14pt;
+        }
+        .check {
+            font-size: 14pt;
+        }
+    </style>
+</head>
+<body>
+    <form action="insert_soft_info.php" method="POST">
+        <h1 align="center">Input software description</h1>
+        <input type="text" name="softname" id="soft-name-field" placeholder="Input name"><br>
+        <input type="text" name="softcreator" id="soft-creator-field" placeholder="Input creator company"><br>
+        <input type="text" name="softprice" id="soft-price-field" placeholder="Input soft price"><br>
+        
+        <input type="checkbox" name="softplatf[]" id="soft-win-platf" value="Windows">
+        <label for="soft-win-platf" class="check">Windows</label><br>
+        
+        <input type="checkbox" name="softplatf[]" id="soft-linux-platf" value="Linux">
+        <label for="soft-linux-platf" class="check">Linux</label><br>
+        
+        <input type="checkbox" name="softplatf[]" id="soft-android-platf" value="Android">
+        <label for="soft-android-platf" class="check">Android</label><br>
+        
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>

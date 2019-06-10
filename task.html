@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Task lab1</title>
+    <style type="text/css">
+    @keyframes example {
+        0%   {top: 150px;}
+        25%  {top: 50px;}
+        50%  {top: 150px;}
+        75%  {top: 50px}
+        100% {top: 150px;}
+    }
+        #square {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+            top: 100px;
+            animation-name: example;
+    animation-duration: 5s;
+            right: -2000px;
+            transition: right 5s cubic-bezier(0, 0, 1, 1);
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+</head>
+
+<body>
+    <div id="square" onclick="zoom()">
+    </div>
+    <script>
+        function zoom() {
+            $("#square").width(
+                $("#square").width() * 1.5
+            );
+            $("#square").height(
+                $("#square").height() * 1.5
+            );
+        }
+
+        jQuery(document).ready(function () {
+            $('#square').css('right', '-800px');
+        });
+
+    </script>
+</body>
+
+</html>

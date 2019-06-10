@@ -1,0 +1,77 @@
+body {
+  margin: 0px;
+  height: 100%;
+}
+
+header {
+  height: 55px;
+  position: fixed;
+  z-index: 1;
+  top: 0px;
+  width: 100%;
+  margin: 0px;
+  background: orangered;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+footer {
+  /* position: absolute; */
+  bottom: 0;
+  height: 20px;
+  padding: 0;
+  background: white;
+  width: 100%;
+}
+
+footer p {
+  margin: 0;
+}
+
+#header-container {
+  display: flex;
+}
+
+#header-container h1 {
+  margin: 8px;
+}
+
+#header-container h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+#menu {
+  background: orangered;
+  border: none;
+  border-radius: 5px;
+}
+
+#menu:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#main-container {
+  /* width: 100%; */
+  display: flex;
+  flex-flow: row wrap;
+  align-items: stretch;
+  align-content: stretch;
+  /* flex-wrap: wrap; */
+}
+
+main {
+  flex: 8 1 600px;
+  /* min-height: 318px; */
+  padding: 8px;
+  margin: 8px 8px 8px 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+aside {
+  flex: 2 1 400px;
+  /* flex-shrink: 5; */
+  /* min-height: 316px; */
+  margin: 8px 8px 8px 8px;
+  padding: 8px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

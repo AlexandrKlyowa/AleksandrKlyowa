@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RGR1-Web</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sidenav.css">
+  <script src="js/sidenav.js"></script>
+  <script src="js/randomjoke.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <script>
+    $("document").ready(function () {
+      getRandomJoke();
+    }); 
+  </script>
+  <header>
+    <div id="header-container">
+      <button id="menu" onclick="openOrCloseNav()">
+        <img src="images/ic_menu_black_36px.svg" alt="Menu">
+      </button>
+      <h1>
+        <a href="index.html">Polevichenko website</a>
+      </h1>
+    </div>
+  </header>
+
+  <nav id="sidenav-menu">
+    <a href="hobbies.html">Увлечения</a>
+    <a href="gadget.html">Любимый гаджет</a>
+    <a href="pet.html">Любимый питомец</a>
+    <a href="tasks.html">Интересные задания</a>
+  </nav>
+
+  <div id="main-container">
+    <main id="main">
+      <!--specific page content goes here-->
+      <article>
+        <h1>Мои увлечения</h1>
+        <p>У меня есть несколько увлечений:</p>
+        <ul>
+          <li>Первое и самое важное, чтение книг:<br>
+          <img src="images/hobbies3.jpeg" style="width: 80%" alt="Coding"></li>
+          <li>Дальше по списку видеоигры, это отличный способ отвлечся и расслабится:<br>
+          <img src="images/hobbies2.jpg" style="width: 80%" alt="Dancing"></li>
+          <li>Конечно же, сериальчики<br>
+          Можно было вставить картинку с изображением любимого, но их сильно много</li>
+          <!--<li>Последнее по списку, но не по важности: чтение книг<br>
+          <img src="images/hobbies3.jpeg" style="width: 80%" alt="Reading"></li>-->
+        </ul>
+      </article>
+      <!--specific page content goes here-->
+    </main>
+
+    <aside id="random-joke">
+        <h1>Random picture for you:</h1>
+        <img id="random-joke-place" src="replace" alt="joke" style="width: 80%;">
+      </aside>
+  </div>
+
+  <footer>
+    <p align="center">Written in 2019 by Polevichenko Inc.</p>
+  </footer>
+</body>
+
+</html>

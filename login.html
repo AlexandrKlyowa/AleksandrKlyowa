@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>RGR1-Web</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sidenav.css">
+  <script src="js/sidenav.js"></script>
+  <script src="js/randomjoke.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <style type="text/css">
+    .container {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+      align-content: stretch;
+    }
+
+    form {
+      padding: 8px;
+      /* width: 300px; */
+      border: 3px solid grey;
+      border-radius: 5px;
+    }
+
+    input {
+      margin: 8px;
+      padding: 4px;
+      font-size: 14pt;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    $("document").ready(function () {
+      getRandomJoke();
+    }); 
+  </script>
+  <header>
+    <div id="header-container">
+      <button id="menu" onclick="openOrCloseNav()">
+        <img src="images/ic_menu_black_36px.svg" alt="Menu">
+      </button>
+      <h1>
+        <a href="index.html">Polevichenko website</a>
+      </h1>
+    </div>
+  </header>
+
+  <nav id="sidenav-menu">
+    <a href="hobbies.html">Увлечения</a>
+    <a href="gadget.html">Любимый гаджет</a>
+    <a href="pet.html">Любимый питомец</a>
+    <a href="tasks.html">Интересные задания</a>
+  </nav>
+
+  <div id="main-container">
+    <main id="main">
+      <!--specific page content goes here-->
+      <p>You are going to wisit secret page of this website</p>
+      <p>Please enter your login and password or registry</p>
+      <article>
+        <div id="container">
+          <div id="login-form">
+            <form action="login.php" method="post">
+              <p>Login form</p>
+              <p>Your login:</p>
+              <input type="text" name="login" id="login">
+              <br>
+              <p>Your password:</p>
+              <input type="password" name="password" id="password">
+              <br>
+              <input type="submit" value="Login">
+            </form>
+          </div>
+          <div id="registry-form">
+            <form action="registry.php" method="post">
+              <p>Registry form</p>
+              <p>Your login:</p>
+              <input type="text" name="login" id="login">
+              <br>
+              <p>Your password:</p>
+              <input type="password" name="password" id="password">
+              <br>
+              <input type="submit" value="Registry">
+            </form>
+          </div>
+        </div>
+      </article>
+      <!--specific page content goes here-->
+    </main>
+
+    <aside id="random-joke">
+      <h1>Random picture for you:</h1>
+      <img id="random-joke-place" src="replace" alt="joke" style="width: 60%;">
+    </aside>
+  </div>
+
+  <footer>
+    <p align="center">Written in 2019 by Polevichenko Inc.</p>
+  </footer>
+</body>
+
+</html>
